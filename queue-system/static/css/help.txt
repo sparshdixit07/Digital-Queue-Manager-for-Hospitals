@@ -1,0 +1,61 @@
+✅ Help & Support (Ready-to-Use Text)
+📌 Welcome to the Help Center
+
+Agar aapko Digital Queue Manager ka use karne me koi dikkat aa rahi hai, to yahan aapko saare important answers milenge. Humara system aapki service experience ko fast, transparent aur hassle-free banane ke liye banaya gaya hai.
+
+🙋‍♂️ Frequently Asked Questions (FAQ)
+1. Token kaise generate karein?
+
+Homepage par Get Your Token section me jaiye
+
+Apna Name, Mobile Number, aur Service Type select kijiye
+
+Generate Token button dabaiye
+
+Aapko turant apna Token Number mil jayega
+
+2. Token generate karne ke baad kya hota hai?
+
+Aapka token Live Queue me automatically add ho jata hai.
+Wahan aap dekh sakte hain:
+
+Kitne log wait kar rahe hain
+
+Aapka token number kis position par hai
+
+Serve hone ka status
+
+3. “Serve Next” ka kya matlab hai?
+
+Admin panel me available hai.
+Jab admin “Serve Next” button press karta hai:
+
+Next waiting token call hota hai
+
+Screen par show hota hai
+
+Beep sound play hota hai
+
+4. Agar token print nahi ho raha ho to kya karein?
+
+Browser mobile mode me ho to “Save as PDF” option select karein
+
+Printer connected ho to direct print kar sakte hain
+
+Print button na chale to page reload karke dobara try karein
+
+5. Live Queue update nahi ho raha?
+
+“Refresh” button press karein
+
+Internet connection check karein
+
+Agar fir bhi update na ho to 1 minute wait karein — system auto sync karta hai
+
+🛠 Technical Issues?
+
+Agar aapko koi technical problem aa rahi ho, aap humse contact karein:
+
+📧 support@queue.in
+
+📞 +91-98XXXXXX10

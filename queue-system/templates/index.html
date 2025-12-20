@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Digital Queue Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand"> Digital-QueueManager</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#live">Live Queue</a>
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="left card">
+      <h2 class="title">Get Your Token</h2>
+      <form id="tokenForm" class="form">
+        <label>Name*
+          <input type="text" name="name" id="name" placeholder=" Enter Your name (अपना नाम दर्ज करें)" required  maxlength="50">
+        </label>
+
+        <label>Mobile*
+          <input type="tel" name="mobile" id="mobile" placeholder=" Enter Phone number (अपना फोन नंबर डालें)" required pattern="[0-9]{10}">
+        </label>
+
+        <label>Service Type*
+          <select id="category" name="category">
+            <option value="general">General (G)</option>
+            <option value="lab">Lab (L)</option>
+            <option value="emergency">Emergency (E)</option>
+          </select>
+        </label>
+
+        <button type="submit" class="btn primary" id="genrtebtn">Generate Token</button>
+      </form>
+
+      <div id="result" class="result hidden">
+        <h3>Your Token</h3>
+        <div id="tokenNumber" class="tokenBig"></div>
+        <p id="smallInfo"></p>
+        <button id="printBtn" class="btn">Print / Save</button>
+      </div>
+    </section>
+
+    <aside class="right card" id="live">
+      <h2 class="title">Live Queue</h2>
+      <div class="stats" id="stats">
+        <div>Total today: <span id="statTotal">0</span></div>
+        <div>Waiting: <span id="statWaiting">0</span></div>
+        <div>Served: <span id="statServed">0</span></div>
+      </div>
+
+      <div class="queueList" id="queueList">
+        <!-- tokens will appear here -->
+      </div>
+
+      <div class="queueActions">
+        <button id="refreshBtn" class="btn">Refresh</button>
+      </div>
+    </aside>
+  </main>
+  <!-- <footer class="footer">
+    <div class="footer-content">
+      <p>Digital Queue Manager &copy; 2025 Built with ❤️ </p>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Live Queue</a>
+        <a href="#">Admin LOgin</a>
+      </div>
+    </div>
+    <!<small>Digital Queue Manager • built with ❤️
+      
+    </small> -->
+  <!-- </footer>  -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h3>Digital Queue Manager</h3>
+        <p>Skip the line! Get quick service updates & real-time queue tracking.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#live">Live Queue</a></li>
+          <li><a href="#">Get Token</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: support@queue.in</p>
+        <p>Helpline: +91-98XXXXXX10</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <!-- Developer Section -->
+      <div class="footer-section developer">
+        <h4>Developer</h4>
+        <p>Designed & Developed by <strong>Sparsh Dixit</strong> and team</p>
+        <div class="social-icons">
+          <a href="https://github.com/dashboard" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sparsh-dixit/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://sparshdixit07.github.io/Personal-Portfolio/" title="Portfolio"><i class="fas fa-user-circle"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      © 2025 Digital Queue Manager | Made with ❤️ for better service ✨
+    </div>
+  </footer>
+
+  <!-- FontAwesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script>
+    const btn1 = document.getElementById("genrtebtn");
+    const btn2 = document.getElementById("refreshBtn");
+    const audio = new Audio("static/sound/refesh.mp3");
+    [btn1, btn2].forEach(btn => {
+      btn.addEventListener("click", () => audio.play());
+    });
+  </script>
+
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>

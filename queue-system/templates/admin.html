@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin - Queue Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">QueueManager - Admin</div>
+    <nav>
+      <a href="/">Public</a>
+      <a href="/logout">Logout</a>
+    </nav>
+  </header>
+  <main class="container admin">
+    {% if show_login %}
+      <section class="card center">
+        <h2>Admin Login</h2>
+        {% if login_error %}
+          <div class="error">{{ login_error }}</div>
+        {% endif %}
+        <form method="post" class="form small">
+          <label>Username
+            <input name="username" required>
+          </label>
+          <label>Password
+            <input type="password" name="password" required>
+          </label>
+          <button class="btn primary" type="submit">Login</button>
+        </form>
+      </section>
+    {% else %}
+      <section class="card adminPanel">
+        <div class="adminHeader">
+          <h2>Dashboard</h2>
+          <div>
+            <label>Counter name/number
+              <input id="counterInput" placeholder="e.g., Counter 1">
+            </label>
+            <button id="serveNextBtn" class="btn">✈️Serve Next</button>
+          </div>
+        </div>
+
+        <div class="stats" id="adminStats">
+          <div>Total today: <b id="aTotal">0</b></div>
+          <div>Waiting: <b id="aWaiting">0</b></div>
+          <div>Served: <b id="aServed">0</b></div>
+        </div>
+
+        <h3>Waiting Tokens</h3>
+        <div id="waitingTable" class="table"></div>
+
+        <h3>All tokens today</h3>
+        <div id="allTable" class="table"></div>
+      </section>
+      <script src="/static/js/admin.js"></script>
+    {% endif %}
+  </main>
+  <!--<footer class="footer" id="admin-footer"><small>Admin • Manage tokens</small></footer> -->
+    <footer class="admin-footer">
+    <div class="footer-left">
+        © 2025 Digital Queue Manager Admin Panel
+        <span class="version">v-sd1.0.3</span>
+    </div>
+
+    <div class="footer-middle">
+        <a href="static/css/doc.pdf">Documentation</a> | 
+        <a href="static/css/help.txt">Help</a> | 
+        <a href="static/css/priv.txt">Privacy Policy</a>
+    </div>
+
+    <div class="footer-right">
+        Developed by <strong>Sparsh Dixit</strong> and team
+    </div>
+</footer>
+   <script>
+    const btn= document.getElementById("serveNextBtn");
+    const audio = new Audio("static/sound/beep.mp3");
+    btn.addEventListener("click", () => {
+       audio.play();
+    });
+  </script>
+
+</body>
+</html>
